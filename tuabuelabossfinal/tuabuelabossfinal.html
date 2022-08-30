@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Abuelitamón</title>
+        <script>
+            alert("Ha despertado una furia ancestral... Tu desafío de nieto desgradecido ha hecho digievolucionar a tu abuela. No deberías haberla retado... ¡Prepárate!")
+        </script>
+        <script src="js/tuabuelabossfinal.js"></script>
+    </head>
+    <body>
+        <h1>👵🏻¡Abuelitamón spawned!👵🏻</h1>
+        <h3>
+            Tu abuela está muy furiosa. Deberás esquivar sus lanzamientos e intentar ganarte su amor de nuevo.
+            Empecemos por elegir qué objeto usarás como escudo.
+        </h3>
+
+        <section id="seccion-seleccion-objeto">
+            <h2>Elige tu escudo: <span id="objeto-jugador"></span></h2>
+            
+            <label for="Jarrón"><img src="jarron.png" width="40" height="40" alt="🏺">Jarrón (Vida:60)</label>
+            <input type="radio" name="objetodefensa" id="Jarrón"/>
+            
+            <label for="Cuadro familiar"><img src="cuadrofamiliar.png" width="40" height="40" alt="🖼️">Cuadro familiar (Vida: 85)</label>
+            <input type="radio" name="objetodefensa" id="Cuadro familiar"/>
+                        
+            <label for="Caja de costura"><img src="cajacostura.jpg" width="40" height="40" alt="🧰">Caja de costura (Vida:100)</label>
+            <input type="radio" name="objetodefensa" id="Caja de costura"/>
+            
+            <button id="boton-elegir-objeto">Elegir</button>
+
+            <h2>Elige la dificultad de juego: <span id="dificultad-elegida"></span></h2>
+            <p>Tu abuela no tiene la vista muy fina, así que no siempre acertará sus lanzamientos.
+                Cuánto mayor sea la dificultad de juego, mayor será la probabilidad de que acierte.
+                A su vez, tus argumentos tendrán menos valor para ella, por lo que serán menos efectivos.
+            </p>
+            <button id="boton-fácil" name="botones-dificultad">Fácil 🐞</button>
+            <button id="boton-media" name="botones-dificultad">Media 💪🏻</button>
+            <button id="boton-difícil" name="botones-dificultad">Difícil ☣️</button>
+            
+            
+        </section>
+          
+        <section">
+            <h1>¡COMIENZA!</h1>
+
+            <p>Vidas de tu <span id="objeto-elegido"></span>: <span id="vidas-objeto"></span>________vs________<span id="furia-abuelita"></span> :furia de tu abuela</p>
+            
+            <p>
+                <h3>Es el turno de... !</h3>
+                <h3>¿Cómo quieres ganarte a tu abuela?</h3>
+                <button id="boton-regalar-flores">Regalar flores 💐</button>
+                <button id="boton-decir-tq">Decir "te quiero" 💌</button>
+                <button id="boton-halagar">Halagar sus croquetas 🥔</button>
+            </p>
+            
+        </section>
+        <h3>CONSOLA DE DEBATE</h3>
+        <section id="mensajes-combate"></section>
+
+        <section id="try-again">
+            <button id="boton-try-again">Vuelve a jugartela</button>
+        </section>
+    </body>
+</html>
