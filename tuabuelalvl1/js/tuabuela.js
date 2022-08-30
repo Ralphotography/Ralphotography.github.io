@@ -55,6 +55,7 @@ function resultado(){
     } else if(wins<looses){
         alert("Perdiste... estaba claro 🙅🏻‍♂️")
     } else {alert("no sé que ha pasao")}
+    
 }
 //AQUÍ EMPIESA  
 menu()
@@ -63,6 +64,4 @@ let looses = 0
 while (wins < 3 && looses < 3){
     juego()
 }
-resultado()
-alert("Recarga página si quieres seguir jugando")
-          
+resultado()          
