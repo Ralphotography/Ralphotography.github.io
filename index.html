@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1>¡Bienvenido!</h1>
+<p>Pulsa este inocente botón
+    <a href="tuabuelalvl1/tuabuelaweb.html" > <button>Hola, soy un botón inocente</button></a>.
+    </p>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDl_W-jUu0G4_rxkAOUDCwP6YUQbQnhzsw",
+      authDomain: "grandma-challenge.firebaseapp.com",
+      projectId: "grandma-challenge",
+      storageBucket: "grandma-challenge.appspot.com",
+      messagingSenderId: "829376552144",
+      appId: "1:829376552144:web:9e8c2e4f74665b17b152d5",
+      measurementId: "G-N0BZ1KSKN5"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 </html>
