@@ -4,85 +4,74 @@
         <meta charset="UTF-8"/>
         <title>Abuelitamón</title>
         <script>
-            alert("Ha despertado una furia ancestral... Tu desafío de nieto desgradecido ha hecho digievolucionar a tu abuela. No deberías haberla retado... ¡Prepárate!")
+            alert("Ha despertado una furia ancestral... ")
         </script>
-        <script src="js/tuabuelabossfinal.js"></script>
+        
     </head>
     <body>
-        <h1>👵🏻¡Abuelitamón spawned!👵🏻</h1>
-        <h3>
-            Tu abuela está muy furiosa. Deberás esquivar sus lanzamientos e intentar ganarte su amor de nuevo.
-            Empecemos por elegir qué objeto usarás como escudo.
-        </h3>
+        <center>
+        <p id="instrucciones" style="display: block;">
+            <h3>Tu abuela está tan furiosa que empieza a lanzarte todo lo que pilla. <br> Deberás defenderte de sus lanzamientos e intentar ganarte su amor de nuevo. <br> 
+            <img id="abuelita-enfadada" src="https://c.tenor.com/VK7ryNkVG4IAAAAC/rage-grandma.gif" style="display:none;">
+            <br>
+            <bUtton id="boton-iniciar-selección" style="display:none">ELEGIR MI OBJETO</bUtton>
+        </p>
 
-        <section id="seccion-seleccion-objeto">
-            <h2>Elige tu escudo: <span id="objeto-jugador"></span></h2>
+        <section id="menú-selección" style="display:none;">
+            <h2>Qué objeto usarás como escudo: </h2>
             
-            <label for="Jarrón"><img src="jarron.png" width="40" height="40" alt="🏺">Jarrón (Vida:60)</label>
+            <label for="Jarrón"><img src="https://www.pngmart.com/files/7/Vase-PNG-Photo.png" width="40" height="40" alt="🏺">(Vida:60)</label>
             <input type="radio" name="objetodefensa" id="Jarrón"/>
-            
-            <label for="Cuadro familiar"><img src="cuadrofamiliar.png" width="40" height="40" alt="🖼️">Cuadro familiar (Vida: 85)</label>
+            <br>
+            <label for="Cuadro familiar"><img src="https://cdn-icons-png.flaticon.com/512/2789/2789561.png" width="40" height="40" alt="🖼️">(Vida: 85)</label>
             <input type="radio" name="objetodefensa" id="Cuadro familiar"/>
-                        
-            <label for="Caja de costura"><img src="cajacostura.jpg" width="40" height="40" alt="🧰">Caja de costura (Vida:100)</label>
+            <br>
+            <label for="Caja de costura"><img src="https://s1.eestatic.com/2019/04/05/cocinillas/cocinillas_388722991_119675260_1706x1280.jpg" width="40" height="40" alt="🧰">(Vida:100)</label>
             <input type="radio" name="objetodefensa" id="Caja de costura"/>
-            
-            <button id="boton-elegir-objeto">Elegir</button>
-
-            <h2>Elige la dificultad de juego: <span id="dificultad-elegida"></span></h2>
-            <p>Tu abuela no tiene la vista muy fina, así que no siempre acertará sus lanzamientos.
-                Cuánto mayor sea la dificultad de juego, mayor será la probabilidad de que acierte.
-                A su vez, tus argumentos tendrán menos valor para ella, por lo que serán menos efectivos.
+            <p>
+                <input id="boton-elegir-objeto" type=button value="ELEGIR" style="BORDER: rgb(44, 147, 210) 5px outset; FONT-SIZE: 12pt; FONT-FAMILY: Verdana; BACKGROUND-COLOR: rgb(154, 226, 251)">
+                <h2 id="mostrar-selección" style="display:none;">Has elegido: <span id="objeto-jugador"></span></h2>
             </p>
-            <button id="boton-fácil" name="botones-dificultad">Fácil 🐞</button>
-            <button id="boton-media" name="botones-dificultad">Media 💪🏻</button>
-            <button id="boton-difícil" name="botones-dificultad">Difícil ☣️</button>
-            
-            
+            <section id="menú-dificultad" style="display:none;">      
+            <h2>Elige la dificultad de juego:</h2>
+            <p><strong>Tip: </strong> Tu abuela no siempre acertará sus lanzamientos. <br>
+                A mayor dificultad, mayor será la probabilidad de que acierte. <br>
+                Tus estrategias también serán menos efectivas.
+                
+            </p>
+            <input id="boton-fácil" type=button value="Fácil 🐞" style="border: rgb(79, 79, 79) 2px outset; FONT-SIZE: 12pt; FONT-FAMILY: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; BACKGROUND-COLOR: rgb(129, 255, 122)"name="botones-dificultad">
+            <input id="boton-media" type=button value="Media 💪🏻" style="BORDER: rgb(79, 79, 79) 2px outset; FONT-SIZE: 12pt; FONT-FAMILY: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; BACKGROUND-COLOR: rgb(255, 180, 122)"name="botones-dificultad">
+            <input id="boton-difícil" type=button value="Difícil ☣️" style="BORDER: rgb(79, 79, 79) 2px outset; FONT-SIZE: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; BACKGROUND-COLOR: rgb(255, 35, 35)"name="botones-dificultad">
+            </section>     
+                        
         </section>
           
-        <section">
-            <h1>¡COMIENZA!</h1>
+        <section id="comienzo-partida" style="display:none">
+            <h1>👵🏻¡Abuelitamón spawned!👵🏻</h1>
+            <p>DIFICULTAD: <span id="dificultad-elegida"></span></p>
 
-            <p>Vidas de tu <span id="objeto-elegido"></span>: <span id="vidas-objeto"></span>________vs________<span id="furia-abuelita"></span> :furia de tu abuela</p>
+            <p>Vidas de <span id="objeto-elegido">  </span><span id="vidas-objeto" style="font-size: 15pt;color: rgb(0, 0, 0)"></span><br>
+            Furia de tu abuela  <span id="furia-abuelita" style="font-size: 15pt;color: rgb(0, 0, 0)";></span>
+            </p>
+
+            <h2><span id="comienza-batalla" style="display:-moz-popup; font-size:20pt;"></span></h2>
             
-            <p>
-                <h3>Es el turno de... !</h3>
-                <h3>¿Cómo quieres ganarte a tu abuela?</h3>
+            <p id="mensajes-combate" style="font-family:15pt;"></p>
+            
+            <p id="botones-estrategia" style='display: none;'>
                 <button id="boton-regalar-flores">Regalar flores 💐</button>
                 <button id="boton-decir-tq">Decir "te quiero" 💌</button>
                 <button id="boton-halagar">Halagar sus croquetas 🥔</button>
             </p>
-            
         </section>
-        <h3>CONSOLA DE DEBATE</h3>
-        <section id="mensajes-combate"></section>
 
-        <section id="try-again">
-            <button id="boton-try-again">Vuelve a jugartela</button>
+        <section id="ganador">
+            <img id='abuelita-gana' src="https://c.tenor.com/nOWiZnwvR-4AAAAM/grandma-friday-nights-alone.gif" style="display:none;">
+            <img id='jugador-gana' src="https://c.tenor.com/3EembEFnG14AAAAM/betty-white-american-actress.gif" style="display:none;">
+
         </section>
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-              apiKey: "AIzaSyDl_W-jUu0G4_rxkAOUDCwP6YUQbQnhzsw",
-              authDomain: "grandma-challenge.firebaseapp.com",
-              projectId: "grandma-challenge",
-              storageBucket: "grandma-challenge.appspot.com",
-              messagingSenderId: "829376552144",
-              appId: "1:829376552144:web:9e8c2e4f74665b17b152d5",
-              measurementId: "G-N0BZ1KSKN5"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-          </script>
+        </center>
+        
+        <script src="js/tuabuelabossfinal.js"></script>
     </body>
 </html>
