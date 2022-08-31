@@ -147,7 +147,6 @@ function registroMensajesJugador() {
     setTimeout(function(){secciónRegistroMensajes.removeChild(mensajeEsperarLanzamiento)}, 4000)
 
     comprobarFinalCombate()
-    comprobarSaturaciónMensajes()
     setTimeout(function(){tipoAbuelitaAleatorio()}, 5000)
 }
 //Turno abuelita
