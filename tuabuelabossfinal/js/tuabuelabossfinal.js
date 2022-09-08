@@ -39,7 +39,7 @@ function forzarSelección(){
     let inputJarrón = document.getElementById('Jarrón')
     let inputCuadroFamiliar = document.getElementById('Cuadro familiar')
     let inputCajaCostura = document.getElementById('Caja de costura')
-    if (inputJarrón.check || inputCuadroFamiliar.checked || inputCajaCostura.checked){elegirObjeto()}
+    if (inputJarrón.checked || inputCuadroFamiliar.checked || inputCajaCostura.checked){elegirObjeto()}
     else {alert("Debes elegir un objeto para continuar");iniciarSelección}
 }
 function elegirObjeto(){
@@ -136,7 +136,7 @@ function mostrarFuriaAbuelita() {
     else {statusFuria.style.color="rgb(129, 255, 122)"}
 }
 function registroMensajesJugador() {
-
+    
     mensajeEstrategiaJugador.innerHTML= '>    Has probado a ' + estrategiaJugador + '. <br> Tu estrategia tuvo una eficacia de: ' + poderEstrategia + ' puntos en reducir el enfado de tu abuela.'
    
     secciónRegistroMensajes.appendChild(mensajeEstrategiaJugador)
